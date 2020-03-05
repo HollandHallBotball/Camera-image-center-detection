@@ -2,17 +2,14 @@
 //and then configure anlg 0 as rightLight and anlg1 as leftLight. The type for both should be set to Light Sensor.
 //Also, configure the push button (digital port 2) as a touch sensor and call it 'button'.
 
-include
-
-int leftValue = 0;
-  int rightValue = 0;
+#define int leftValue = 0;
+#define int rightValue = 0;
+#define int leftLow = 1000; //High number so the < comparison will work (we don't want the low value to always be 0!)
+#define int rightLow = 1000; //Same deal here.
+#define int leftHigh = 0;
+#define int rightHigh = 0;
  
-  int leftLow = 1000; //High number so the < comparison will work (we don't want the low value to always be 0!)
-  int rightLow = 1000; //Same deal here.
-  int leftHigh = 0;
-  int rightHigh = 0;
- 
-  // Auto-calibration ended by button press. The button will begin the light following.
+ // Auto-calibration ended by button press. The button will begin the light following.
   while(!SensorValue[button]) {
     leftValue = SensorValue[leftLight];
     rightValue = SensorValue[rightLight];
@@ -30,4 +27,5 @@ int leftValue = 0;
     } else if(rightValue < rightLow) {
       rightLow = rightValue;
     }
-    if(
+    if(RightValue > LeftValue) 
+      while 
