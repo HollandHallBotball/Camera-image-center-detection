@@ -10,7 +10,8 @@
 #define int rightHigh = 0;
  
  // Auto-calibration ended by button press. The button will begin the light following.
-  while(!SensorValue[button]) {
+   while 
+   (!SensorValue[button]) {
     leftValue = SensorValue[leftLight];
     rightValue = SensorValue[rightLight];
  
@@ -28,4 +29,4 @@
       rightLow = rightValue;
     }
     if(RightValue > LeftValue) 
-      while 
+     
